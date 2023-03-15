@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 const useAuth = () => {
   let isLoggedIn = true;
   const roles = ['user', 'issuer'];
