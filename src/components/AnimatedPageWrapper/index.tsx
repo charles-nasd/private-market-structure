@@ -19,6 +19,7 @@ const AnimatedPageWrapper: React.FC<Props> = ({ children }) => {
       animate="animate"
       exit="exit"
       transition={{ duration: 0.4, ease: 'easeInOut' }}
+      style={{ height: '100%' }}
     >
       {children}
     </motion.div>
