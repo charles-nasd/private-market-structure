@@ -1,10 +1,13 @@
-import React from 'react';
+import { AnimatedPageWrapper } from '../../components';
+import styles from './Portal.module.scss';
 
 const Portal = () => {
   return (
-    <div>
-      <h1>Portal</h1>
-    </div>
+    <AnimatedPageWrapper>
+      <div className={styles.container}>
+        <h1>Portal</h1>
+      </div>
+    </AnimatedPageWrapper>
   );
 };
 

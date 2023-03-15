@@ -1,8 +1,9 @@
 import React from 'react';
 import { useLocation, Navigate, Outlet } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 const RequireAuth = () => {
-  const isLoggedIn = false;
+  const isLoggedIn = useAuth();
   const location = useLocation();
 
   return isLoggedIn ? (

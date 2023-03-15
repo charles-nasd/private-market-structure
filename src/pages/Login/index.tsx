@@ -1,10 +1,13 @@
-import React from 'react';
+import { AnimatedPageWrapper } from '../../components';
+import styles from './Login.module.scss';
 
 const Login = () => {
   return (
-    <div>
-      <h1>Login</h1>
-    </div>
+    <AnimatedPageWrapper>
+      <div className={styles.container}>
+        <h1>Login</h1>
+      </div>
+    </AnimatedPageWrapper>
   );
 };
 
