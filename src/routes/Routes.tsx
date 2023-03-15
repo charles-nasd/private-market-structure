@@ -28,7 +28,7 @@ function AppRoutes() {
 
             {/* Public routes */}
             <Route path="login" element={<Login />} />
-            <Route path="LandingPage" element={<LandingPage />} />
+            <Route path="landing-page" element={<LandingPage />} />
 
             {/* Private routes */}
             <Route element={<RequireAuth />}>

@@ -3,8 +3,19 @@
 .container {
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: green;
   color: $white;
+
+  .buttonWrapper {
+    margin: 1rem 0;
+    display: flex;
+    gap: 1em;
+
+    button {
+      padding: 0.75em 1em;
+    }
+  }
 }
