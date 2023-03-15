@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -19,6 +21,7 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: $font; // We can use custom fonts here
 }
 
 .App {
