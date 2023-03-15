@@ -4,6 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 
 import { Layout, Preloader, RequireAuth } from '../components';
 import useAuth from '../hooks/useAuth';
+import { ROLES } from '../enums/roles';
 
 const LandingPage = lazy(() => import('../pages/LandingPage'));
 const Login = lazy(() => import('../pages/Login'));
@@ -31,8 +32,22 @@ function AppRoutes() {
             <Route path="landing-page" element={<LandingPage />} />
 
             {/* Private routes */}
-            <Route element={<RequireAuth />}>
-              <Route path="/portal" element={<Portal />} />
+            <Route element={<RequireAuth allowedRoles={[ROLES.user]} />}>
+              <Route path="/portal" element={<Portal />}>
+                {/* <Route element={<RequireAuth allowedRoles={[ROLES.issuer]} />}>
+                  <Route
+                    path="transaction-history"
+                    element={<TransactionHistory />}
+                  />
+                </Route> */}
+
+                {/* <Route element={<RequireAuth allowedRoles={[ROLES.broker]} />}>
+                  <Route
+                    path="alloment-schedule"
+                    element={<AllotmentSchedule />}
+                  />
+                </Route> */}
+              </Route>
             </Route>
 
             {/* Catch all route */}

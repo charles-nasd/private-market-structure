@@ -2,11 +2,8 @@ import { Link } from 'react-router-dom';
 
 import { AnimatedPageWrapper } from '../../components';
 import styles from './Portal.module.scss';
-import useAuth from '../../hooks/useAuth';
 
 const Portal = () => {
-  const { toggleAuth } = useAuth();
-
   return (
     <AnimatedPageWrapper>
       <div className={styles.container}>
@@ -16,7 +13,7 @@ const Portal = () => {
           <button>
             <Link to="/login">Login</Link>
           </button>
-          <button onClick={toggleAuth}>
+          <button>
             <Link to="/">Log out</Link>
           </button>
         </div>
