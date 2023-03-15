@@ -1,11 +1,15 @@
 import { useState } from 'react';
 
 const useAuth = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [auth, setAuth] = useState({
+    isLoggedIn: false,
+    roles: ['user', 'issuer'],
+  });
 
-  const toggleAuth = () => setIsLoggedIn(!isLoggedIn);
+  const loginUser = () => setAuth({ ...auth, isLoggedIn: true });
+  const logoutUser = () => setAuth({ ...auth, isLoggedIn: false });
 
-  return { isLoggedIn, toggleAuth };
+  return { auth, loginUser, logoutUser };
 };
 
 export default useAuth;
